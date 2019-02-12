@@ -88,14 +88,6 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\201902121502353_InitialCreate.Designer.vb">
-      <DependentUpon>201902121502353_InitialCreate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902121502353_InitialCreate.vb" />
-    <Compile Include="Migrations\201902121508239_v2.Designer.vb">
-      <DependentUpon>201902121508239_v2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902121508239_v2.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Model\Abteilung.vb" />
     <Compile Include="Model\Kunde.vb" />
@@ -120,12 +112,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902121502353_InitialCreate.resx">
-      <DependentUpon>201902121502353_InitialCreate.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902121508239_v2.resx">
-      <DependentUpon>201902121508239_v2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

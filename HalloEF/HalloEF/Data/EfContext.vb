@@ -18,6 +18,8 @@ Public Class EfContext
 
         modelBuilder.Conventions.Remove(Of ModelConfiguration.Conventions.PluralizingTableNameConvention)()
 
+        'Database.SetInitializer(New Entity.MigrateDatabaseToLatestVersion(Of EfContext, Migrations.Configuration))
+
         modelBuilder.Entity(Of Person).ToTable("Person")
         modelBuilder.Entity(Of Mitarbeiter).ToTable("Mitarbeiter")
         modelBuilder.Entity(Of Kunde).ToTable("Kunden")

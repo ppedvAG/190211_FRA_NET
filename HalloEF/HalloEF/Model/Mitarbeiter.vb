@@ -5,5 +5,8 @@
     Public Overridable Property Abteilungen As HashSet(Of Abteilung) = New HashSet(Of Abteilung)()
 
 
-    Public Property Alter As Long
+    'Public Property Alter As Long
+
+    'Public Property Geschlecht As String
+
 End Class
