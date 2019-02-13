@@ -1,7 +1,7 @@
 ﻿Public Class Charge
     Inherits Entity
 
-    Public Property Charge As String
+    Public Property ChargeBez As String
     Public Property HerstellDatum As Date
     Public Property AndruckHerstellDatum As String
     Public Property VerfallDatum As Date

@@ -13,6 +13,9 @@ Public Class EfContext
 
     Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
         modelBuilder.Conventions.Remove(Of ModelConfiguration.Conventions.PluralizingTableNameConvention)()
+
+        modelBuilder.Properties(Of Date).Configure(Function(c) c.HasColumnType("datetime2"))
+
     End Sub
 
     Sub New(connectionString As String)
