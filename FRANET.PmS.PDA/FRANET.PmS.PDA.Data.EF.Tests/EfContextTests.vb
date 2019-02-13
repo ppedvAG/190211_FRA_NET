@@ -95,8 +95,33 @@ Public Class EfContextTests
     End Sub
 
     <TestMethod()>
-    Public Sub EfContext_Auftrag_with_Charge_delete_Charge_throws_ex()
-        Assert.Fail("todo")
+    Public Sub EfContext_Auftrag_with_Charge_delete_Charge_cascade_deletes_Auftrag()
+
+        Dim auf As New Auftrag()
+        Dim charg As New Charge()
+        auf.Chargen.Add(charg)
+
+        Using con As New EfContext()
+            con.Auftraege.Add(auf)
+            con.SaveChanges()
+        End Using
+
+        Using con As New EfContext()
+            Dim loadedCharg = con.Chargen.Find(charg.Id)
+            Assert.IsNotNull(loadedCharg)
+
+            con.Chargen.Remove(loadedCharg)
+            con.SaveChanges()
+        End Using
+
+        Using con As New EfContext()
+            Dim loadedAuf = con.Auftraege.Find(auf.Id)
+            Assert.IsNull(loadedAuf)
+
+            Dim loadedCharg = con.Chargen.Find(charg.Id)
+            Assert.IsNull(loadedCharg)
+        End Using
+
     End Sub
 
 End Class
