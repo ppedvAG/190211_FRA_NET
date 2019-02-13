@@ -10,5 +10,4 @@
 
     Public Overridable Property Auftrag As HashSet(Of Auftrag) = New HashSet(Of Auftrag)()
 
-
 End Class
