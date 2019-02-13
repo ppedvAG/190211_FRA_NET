@@ -16,6 +16,10 @@ Public Class EfContext
 
         modelBuilder.Properties(Of Date).Configure(Function(c) c.HasColumnType("datetime2"))
 
+        modelBuilder.Entity(Of Auftrag) _
+                    .HasMany(Function(x) x.Chargen) _
+                    .WithRequired(Function(x) x.Auftrag) _
+                    .WillCascadeOnDelete(True)
     End Sub
 
     Sub New(connectionString As String)

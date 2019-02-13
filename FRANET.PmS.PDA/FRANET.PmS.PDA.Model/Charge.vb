@@ -8,6 +8,6 @@
     Public Property AndruckVerfallDatum As String
     Public Property Menge As Long
 
-    Public Overridable Property Auftrag As HashSet(Of Auftrag) = New HashSet(Of Auftrag)()
+    Public Overridable Property Auftrag As Auftrag
 
 End Class

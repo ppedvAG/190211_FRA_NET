@@ -8,6 +8,7 @@
     Public Property Produktext As String
     Public Property Serialisierung As Integer
     Public Property ProduktMaterialNummer As String
+    Public Property Status As AuftragsStatus
 
     Public Overridable Property Land As Land
     Public Overridable Property Landanforderung As Landanforderung
@@ -16,3 +17,11 @@
     Public Overridable Property Chargen As HashSet(Of Charge) = New HashSet(Of Charge)()
 
 End Class
+
+Public Enum AuftragsStatus
+    Unbekannt
+    Geplant
+    Gestartet
+    Pausiert
+    Beendet
+End Enum
